@@ -3,7 +3,7 @@ const app = require('../app');
 
 
 const getCategory = async (req, res) => {
-    const categorias = await categorysModel.getAll();
+    const categorias = await categorysModel.getCategory();
     return res.status(200).json(categorias);
 };
 

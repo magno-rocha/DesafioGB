@@ -3,7 +3,7 @@ const app = require('../app');
 
 
 const getProduct = async (req, res) => {
-    const produtos = await productsModel.getAll();
+    const produtos = await productsModel.getProduct();
     return res.status(200).json(produtos);
 };
 

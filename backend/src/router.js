@@ -35,9 +35,9 @@ router.delete('/pedidos/:id', orderController.deleteOrder);
 router.put('/pedidos/:id', orderController.updateOrder);
 
 router.get('/produtos_pedidos', orderedProductController.getOrderedProduct);
-router.post('/produtos_pedidos', categoryController.addOrderedProduct);
-router.delete('/produtos_pedidos/:id', categoryController.deleteOrderedProduct);
-router.put('/produtos_pedidos/:id', categoryController.updateOrderedProduct);
+router.post('/produtos_pedidos', orderedProductController.addOrderedProduct);
+router.delete('/produtos_pedidos/:id', orderedProductController.deleteOrderedProduct);
+router.put('/produtos_pedidos/:id', orderedProductController.updateOrderedProduct);
 
 
 
