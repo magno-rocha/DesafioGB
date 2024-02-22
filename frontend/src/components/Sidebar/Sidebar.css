@@ -1,0 +1,21 @@
+.sidebar{
+  width: 30%;
+  height: 100%;
+  background-color: darkslategray;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  color: aliceblue;
+}
+
+.sidebar > h2 {
+  margin: 3rem 2rem;
+}
+
+.section{
+  margin: 4rem 4rem;
+  font-size: 1.5rem;
+  gap: 1rem;
+  line-height: 2rem;
+}

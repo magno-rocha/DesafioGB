@@ -1,0 +1,16 @@
+.header {
+  font-family: 'Courier New', Courier, monospace;
+  width: 70%;
+  height: 10%;
+  display: flex;
+  background-color: aliceblue;
+  color: darkslategrey;
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex-direction: row-reverse;
+}
+
+.header > h1 {
+  margin: 3rem 1rem;
+}

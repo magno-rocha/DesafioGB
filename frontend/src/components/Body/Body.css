@@ -1,0 +1,9 @@
+.body-container {
+  color: aliceblue;
+  display: flex;
+  width: 70%;
+  height: 90%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
