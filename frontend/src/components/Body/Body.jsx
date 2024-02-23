@@ -5,7 +5,6 @@ import './Body.css';
 function Body() {
   return(
     <div className="body-container"> 
-      <h1>Aguardando Dados</h1>
       <Clients />
     </div>
   )

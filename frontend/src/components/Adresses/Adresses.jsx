@@ -1,5 +1,5 @@
 import React from 'react';
-import './Clients.css';
+import './Addresses.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -27,11 +27,11 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-function Clients() {
+function Addresses() {
   const classes = useStyles();
   return (
     <div className="table-container">
-      <h1>Clientes</h1>
+      <h1>Endereços</h1>
       <TableContainer component={Paper}>
         <Table className={classes.table} size="medium" aria-label="a dense table">
           <TableHead>
@@ -69,4 +69,4 @@ function Clients() {
     </div>
   )
 }
-export default Clients;
+export default Addresses;

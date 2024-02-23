@@ -1,5 +1,5 @@
 .sidebar{
-  width: 30%;
+  width: 20%;
   height: 100%;
   background-color: darkslategray;
   position: absolute;
@@ -14,7 +14,7 @@
 }
 
 .section{
-  margin: 4rem 4rem;
+  margin: 4rem 2rem;
   font-size: 1.5rem;
   gap: 1rem;
   line-height: 2rem;

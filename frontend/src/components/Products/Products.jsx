@@ -1,5 +1,5 @@
-import React from 'react';
-import './Clients.css';
+import {React, useEffect, useState} from 'react';
+import './Products.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -8,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import axios from 'axios';
 
 const useStyles = makeStyles({
   table: {
@@ -27,11 +28,20 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-function Clients() {
+function Products() {
   const classes = useStyles();
+  const [apiUrl] = useState(
+    'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon'
+  );
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios.get(apiUrl).then((response) => {
+      setProducts(response.data);
+    });
+  }, [apiUrl]);
   return (
     <div className="table-container">
-      <h1>Clientes</h1>
+      <h1>Produtos</h1>
       <TableContainer component={Paper}>
         <Table className={classes.table} size="medium" aria-label="a dense table">
           <TableHead>
@@ -69,4 +79,4 @@ function Clients() {
     </div>
   )
 }
-export default Clients;
+export default Products;

@@ -1,9 +1,10 @@
 .body-container {
   color: aliceblue;
   display: flex;
-  width: 70%;
+  width: 80%;
   height: 90%;
   position: absolute;
   right: 0;
   bottom: 0;
+  flex-direction: column;
 }
