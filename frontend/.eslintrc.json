@@ -38,7 +38,12 @@
         "eol-last":[ 
             "error",
             "always"
+        ],
+        "react/prop-types":[
+            "off"
+        ],
+        "no-unused-vars":[
+            "warn"   
         ]
-
     }
 }
