@@ -14,7 +14,18 @@ code {
 }
 
 .container {
-  max-width: 1100px;
+  width: 100%;
   background-color: aliceblue;
   color: darkgreen;
+}
+
+.body-container {
+  color: aliceblue;
+  display: flex;
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
 }

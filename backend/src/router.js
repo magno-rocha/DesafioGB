@@ -6,8 +6,14 @@ const clientController = require('./controllers/clientController');
 const addressController = require('./controllers/addressController');
 const orderController = require('./controllers/orderController');
 const orderedProductController = require('./controllers/orderedProductController');
+const cors = require('cors');
 
-
+router.use(cors());
+router.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); 
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 router.get('/produtos', productController.getProduct);
 router.post('/produtos', productController.addProduct);

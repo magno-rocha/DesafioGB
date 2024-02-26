@@ -26,7 +26,7 @@ class ProductsInfo extends Component {
     const { image } = this.props;
 
     return (
-      <div className="card">
+      <div className="cards col-3">
         <div>    
           {!details ? (
             <div>
@@ -36,10 +36,10 @@ class ProductsInfo extends Component {
                 className="btn btn-outline-secondary card-btn"
                 onClick={() => this.setState({ details: !details })}
               >
-                More Details
+                Detalhes
               </button>
                 
-              <button className="card-btn" onClick={() => this.setState({ details: !details })}>Delete</button>
+              <button className="card-btn" onClick={() => this.setState({ details: !details })}>Deletar</button>
                 
             </div>
           ) : null}
@@ -57,9 +57,8 @@ class ProductsInfo extends Component {
                 className="btn btn-outline-secondary card-btn"
                 onClick={() => this.setState({ details: !details })}
               >
-                Hide Details
+                Cobrir Detalhes
               </button>
-              <button className="card-btn">Edit Details</button>
             </div>
           ) : null}
         </div>

@@ -12,25 +12,6 @@ const App = () => {
   const [apiProducts] = useState(
     'http://localhost:3333/api/produtos'
   );
-  useEffect(() => {
-    axios.get(apiProducts, {headers: {
-      'Access-Control-Allow-Origin': '*',
-    }, proxy: {
-      host: 'http://localhost',
-      port: 3000
-    }}) .then((response) => {
-      
-      setProducts(response.data);
-    });
-    /* axios.get(apiProducts).catch(function (error) {
-      if (error.response) {
-        console.log(error.response.data);
-        console.log(error.response.status);
-        console.log(error.response.headers);
-      } 
-    });*/
-  }, [apiProducts]);
-
   let ordered = products.sort(function (a, b) {
     if (a.name < b.name) {
       return -1;
@@ -40,12 +21,20 @@ const App = () => {
     }
     return 0;
   });
+  useEffect(() => {
+    axios.get(apiProducts).then((response) => {
+      setProducts(response.data);
+    });
+  }, [apiProducts]);
+  console.log(ordered);
   
   return (
-    <div className= "">
-      <Products data={ordered} />
+    <div className= "container">
       <Sidebar /> 
       <Header />
+      <div className= "body-container">
+        <Products data={ordered} />
+      </div>  
     </div>
   );
 }

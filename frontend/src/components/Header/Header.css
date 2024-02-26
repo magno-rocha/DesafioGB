@@ -3,8 +3,8 @@
   width: 80%;
   height: 10%;
   display: flex;
-  background-color: aliceblue;
-  color: darkslategrey;
+  background-color: darkslategray;
+  color: aliceblue;
   position: absolute;
   top: 0;
   right: 0;
@@ -12,5 +12,5 @@
 }
 
 .header > h1 {
-  margin: 3rem 1rem;
+  margin: 2rem 1rem;
 }

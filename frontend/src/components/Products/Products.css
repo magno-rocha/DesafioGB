@@ -1,6 +1,55 @@
-.table-container {
-  margin: 0 auto;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
+.cards{
+  border: 2px solid white;
+  border-radius: 20px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(10, 10, 10, 255);
+  opacity: 0.5;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  overflow-y: auto;
+  display: inline-block;
+}
+
+.card-btn{
+  border: 2px solid white;
+  color: #FFFF82;
+  border-radius: 20px;
+  margin: 5% 20px;
+  padding: 20px;
+  background-color: rgba(10, 10, 10, 255);
+  opacity: 0.6;
+  text-align: center;
+  align-items: center;
+  width: 10rem;
+}
+
+ .card::-webkit-scrollbar {
+  width: 12px;               
+}
+
+.card::-webkit-scrollbar-track {
+  background: transparent;        
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgray;    
+  border-radius: 5px;       
+  border: transparent;
+}
+
+ @keyframes fadeIn {
+  0% {
+    opacity: -2;
+  }
+  50% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+
 }

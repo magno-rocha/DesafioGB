@@ -1,7 +1,7 @@
 .sidebar{
   width: 20%;
   height: 100%;
-  background-color: darkslategray;
+  background-color: cadetblue;
   position: absolute;
   left: 0;
   top: 0;
@@ -10,7 +10,7 @@
 }
 
 .sidebar > h2 {
-  margin: 3rem 2rem;
+  margin: 2rem 2rem;
 }
 
 .section{
