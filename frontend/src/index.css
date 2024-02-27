@@ -15,17 +15,83 @@ code {
 
 .container {
   width: 100%;
-  background-color: aliceblue;
   color: darkgreen;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .body-container {
   color: aliceblue;
+  background-color: aliceblue;
   display: flex;
-  width: 80%;
-  height: 90%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  position: relative;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+
+
+.forms-container {
+  border-radius: 10px;
+  padding: 1rem;
+  color: aliceblue;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: cadetblue;
+  margin-bottom: 2rem;
+}
+
+.body-container .nav-link{
+  color: cadetblue !important;
+}
+
+.body-container .nav-link.active{
+  color: aliceblue !important;
+}
+
+.header-custom {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 10vh;
+  display: flex;
+  background-color: darkslategrey;
+  color: aliceblue;
+  flex-direction: row;
+  align-content: flex-end;
+  align-items: baseline;
+  justify-content: baseline;
+  justify-items: baseline;
+}
+
+.nav-link{
+  color: aliceblue !important;
+}
+
+.nav-link.active{
+  background-color: cadetblue  !important;
+}
+
+.crud-title {
+  right: 1.5rem;
+  top: 1rem;
+  background-color: transparent;
+  position: absolute;
+  color: aliceblue;
+  font-size: 3rem;
+}
+
+.list-group {
+  --bs-list-group-color: aliceblue !important;
+  --bs-list-group-bg: cadetblue !important;
+  --bs-list-group-border-color: var(--bs-border-color);
+}
+
+
+

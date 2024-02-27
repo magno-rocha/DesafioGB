@@ -1,28 +1,26 @@
-const productsModel = require('../models/productModel');
-const app = require('../app');
+const productModel = require('../models/productModel');
 
-
-const getProduct = async (req, res, next) => {
-  const produtos = await productsModel.getProduct();
+const getProduct = async (req, res) => {
+  const produtos = await productModel.getProduct();
   return res.status(200).json(produtos);
 };
 
-const addProduct = async (request, res) => {
-  const createdProduct = await productsModel.addProduct(request.body);
-  return res.status(201).json(request.body);
+const addProduct = async (req, res) => {
+  const createdProduct = await productModel.addProduct(req.body);
+  return res.status(201).json(createdProduct);
 }; 
 
 const deleteProduct = async (request, res) => {
   const { id } = request.params;
 
-  await productsModel.deleteProduct(id);
+  await productModel.deleteProduct(id);
   return res.status(204).json();
 };
 
 const updateProduct = async (request, res) => {
   const { id } = request.params;
 
-  await productsModel.updateProduct(id, request.body);
+  await productModel.updateProduct(id, request.body);
   return res.status(204).json();
 };
 

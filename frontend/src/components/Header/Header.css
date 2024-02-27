@@ -1,6 +1,6 @@
-.header {
+.header-custom {
   font-family: 'Courier New', Courier, monospace;
-  width: 80%;
+  width: 100%;
   height: 10%;
   display: flex;
   background-color: darkslategray;

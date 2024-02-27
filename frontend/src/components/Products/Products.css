@@ -1,28 +1,35 @@
 .cards{
-  border: 2px solid white;
+  border: 2px solid aliceblue;
   border-radius: 20px;
   margin: 0.5rem;
-  padding: 0.5rem;
-  background-color: rgba(10, 10, 10, 255);
-  opacity: 0.5;
-  text-align: center;
+  padding: 1rem;
+  background-color: cadetblue;
   align-items: center;
   align-content: center;
+  justify-content: center;
+  justify-items: center;
   overflow-y: auto;
-  display: inline-block;
+  display: inline-flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.cards-content {
+  text-align: start;
+  font-size: 16px;
 }
 
 .card-btn{
-  border: 2px solid white;
-  color: #FFFF82;
-  border-radius: 20px;
-  margin: 5% 20px;
-  padding: 20px;
-  background-color: rgba(10, 10, 10, 255);
-  opacity: 0.6;
-  text-align: center;
-  align-items: center;
-  width: 10rem;
+  border: 2px solid aliceblue !important;
+  color: aliceblue !important;
+  border-radius: 10px !important;
+  margin: 5% auto !important;
+  padding: 10px !important;
+  background-color: darkslategrey !important;
+  opacity: 0.6 !important;
+  text-align: center !important;
+  align-items: center !important;
+  width: 10rem !important;
 }
 
  .card::-webkit-scrollbar {
@@ -34,7 +41,7 @@
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: darkgray;    
+  background-color: cadetblue;    
   border-radius: 5px;       
   border: transparent;
 }

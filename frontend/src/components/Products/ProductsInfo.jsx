@@ -1,67 +1,55 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class ProductsInfo extends Component {
   constructor() {
     super();
 
     this.state = {
-      name: ['Defining date...'],
-      description: ['Loading names...'],
-      price: ['Loading types...'],
+      id: ['Defining id...'],
+      name: ['Defining names...'],
+      description: ['Loading description...'],
+      price: ['Loading prices...'],
+      quantity: ['Loading quantity...'],
       createdAt: ['Loading date...'],
-      category: ['Loading histories...'],
-      image: ['Loading histories...'], 
+      category: ['Loading categories...'],
+      image: ['Loading images...'], 
     };
   }
-
-  state = { details: true };
   
   render() {
-    const { details } = this.state;
+    const { id } = this.props;
     const { name } = this.props;
     const { description } = this.props;
     const { price } = this.props;
+    const { quantity } = this.props;
     const { createdAt } = this.props;
     const { category } = this.props;
     const { image } = this.props;
 
+    function refreshPage() {
+      window.location.reload(false);
+    }
+
+    const onDelete = (id) => {
+      axios.delete(`http://localhost:3333/api/produtos/${id}`).then(refreshPage)
+    }
+
     return (
-      <div className="cards col-3">
-        <div>    
-          {!details ? (
-            <div>
-              <h3>{name}</h3>
-              <button
-                type="button"
-                className="btn btn-outline-secondary card-btn"
-                onClick={() => this.setState({ details: !details })}
-              >
-                Detalhes
-              </button>
-                
-              <button className="card-btn" onClick={() => this.setState({ details: !details })}>Deletar</button>
-                
-            </div>
-          ) : null}
+      <div className="cards col-3">    
+        <div className= "cards-content">
+          <h3>{name}</h3>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">ID: {id}</li>
+            <li className="list-group-item">Descrição: {description}</li>
+            <li className="list-group-item">Preço: R${price}</li>
+            <li className="list-group-item">Quantidade em Estoque: {quantity}</li>
+            <li className="list-group-item">Data de Cadastro: {createdAt}</li>
+            <li className="list-group-item">Categoria: {category}</li>
+            <li className="list-group-item">Imagem: {image}</li>
+          </ul>
         </div>
-        <div>  
-          {details ? (
-            <div>
-              <h5>Descrição: {description} </h5>
-              <h5>Preço: R${price} </h5>
-              <h5>Data de Cadastro: {createdAt}</h5>
-              <h5>Categoria: {category} </h5>
-              <h5>Imagem: {image} </h5>
-              <button
-                type="button"
-                className="btn btn-outline-secondary card-btn"
-                onClick={() => this.setState({ details: !details })}
-              >
-                Cobrir Detalhes
-              </button>
-            </div>
-          ) : null}
-        </div>
+        <button className="card-btn" onClick={() => onDelete(id)}>Deletar</button>   
       </div>
     );
   }
